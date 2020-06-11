@@ -1,0 +1,98 @@
+@media (min-width: 1000px) {
+	.container{width: 1000px;margin: 0 auto;}
+}
+@media (min-width: 1200px) {
+	.container{width: 1200px;margin: 0 auto;}
+	.breadcrumb .container{width: 1000px;}
+}
+@media (max-width: 999px) {
+	.row{padding: 0 15px;}
+	.header01 .left{display: none;}
+	.header02{padding: 15px 0;}
+	.header02 .img-responsive{width: 250px;}
+	.header03 dl dt{width: 100%;line-height: 40px;}
+	.header03 dl + dl:before{display: none;}
+	.header03 dl dd{width: 100%;}
+	.search_Index ul{padding-left: 0;}
+	.search_Index ul li a{padding: 0 10px 0 0;line-height: 25px;}
+	.search_Index ul li.cur a:before,
+	.search_Index ul li.cur a:after{display: none;}
+	.search_Index .friendlink{display: none;}
+	.indexwrap01{width: 100%;margin-bottom: 15px;}
+	.indexwrap01 .left{width: 100%;margin-bottom: 15px;}
+	.indexwrap01 .right{width: 100%;}
+	.indexwrap01 .pc{display: none;}
+	.indexwrap01 .mobile{display: block;}
+	.mainContentRight{width: 100%;}
+	.mainContentRight .box01 a.btn1{width: 32.333%;}
+	.mainContentRight .box01 a.btn1 + a.btn1{margin-left: 1.5%;}
+	.indexwrap01 .right .box01 a.btn2{padding: 9px 0;display: inline-block;text-align: center;}
+	.mainContentRight .img-responsive a{width: 100%;}
+	.mainContentRight .img-responsive img{width: 100%;}
+	.indexwrap02{width: 100%;}
+	.indexwrap02 .pc{display: none;}
+	.indexwrap02 .mobile{display: block;}
+	.indexwrap02 .left{width: 100%;margin-bottom: 15px;}
+	.indexwrap02 .right{width: 100%;margin-bottom: 15px;}
+	.indexwrap02 .right .video{width: 100%;}
+	.indexwrap02 .right .video #a1{width: 100%;}
+	.cooperate{width: 100%;padding: 0 15px;display: none;}
+	.cooperate .bd{padding: 15px 0;}
+	.cooperate .bd table th,
+	.cooperate .bd table td{display: block;}
+	.cooperate .bd table td{width: 50%;float: left;}
+	.agency,.hatch{width: 100%;padding: 0 15px;}
+	.agency .hd h2{padding: 0 20px;}
+	.agency .bd ul li{width: 100%;text-align: center;}
+	.agency .bd ul li .img-responsive{width: 60%;margin: auto;}
+	.agency.border_ddd{border: none;}
+	.hatch.border_ddd{border: none;}
+	 .unit_search ul{width: 100%;}
+	.unit_search ul li{width: 100%;padding-left: 0;}
+	.main{width: 100%;padding: 0 15px;}
+	.mainContentLeft,.mainContentRight,.mainContentRightTips{width: 100%;}
+	.mainContentLeft{margin-right: 0;}
+	.mainContentLeft .border_ddd{padding: 15px 0;border: none;border-top: 2px solid #ddd;}
+	.mainContentRightTips{min-height: auto;}
+	#box3 .form{min-height: auto;}
+	#box3 .form input[type=reset], #box3 .form input[type=submit]{margin: 20px auto 30px;}
+	#form3{padding: 20px 0;border: none;overflow-x: auto;}
+	.mainContentRight .box01 a.btn2{padding: 9px 0;text-align: center;}
+	.qyxy_datebaseBox01{margin: 15px auto;width: 100%;}
+	.qyxy_datebaseBox01 .left{display: none;}
+	.qyxy_datebaseBox01 .right{width: 100%;margin: 10px auto;padding-left: 10px;}
+	.qyxy_datebaseBox01 .right .block{margin-bottom: 10px;}
+	.qyxy_datebaseBox01 .right span{display: block;}
+	.qyxy_datebaseBox01 .right strong{margin:5px auto; display: block;}
+	.qyxy_datebaseBox01 .right input[type=submit]{margin-top: 15px;}
+	.qyxy_datebaseBox02 .box{width: 100%;margin-bottom: 15px;}
+	.qyxy_datebaseBox02 .box + .box{margin-left: 0;}
+}
+@media (max-width: 640px) {
+	.search_Index .table-cell +.table-cell{width: 70px;}
+	.search_Index .table input[type=submit]{width: 70px;}
+	[class*="indexwrap0"] .mobile .tab_list li:before{width: 10px;}
+	[class*="indexwrap0"] .mobile .tab_list li:after{width: 10px;}
+}
+@media (max-width: 580px) {
+}
+
+@media (max-width: 420px) {
+	.news_show .hd{padding-bottom: 15px;}
+	.news_show .hd .title{font-size: 18px;}
+	
+	
+
+}
+@media (max-width: 380px) {
+	[class*="indexwrap0"] .mobile .tab_list li:before{width: 5px;}
+	[class*="indexwrap0"] .mobile .tab_list li:after{width: 5px;}
+	.agency .hd h2{padding: 0 12px;}
+	.qyxy_datebaseBox02 .box .hd h2{text-indent: 0;}
+	.qyxy_datebaseBox02 .box .bd table td:nth-child(2){font-size: 12px;padding-right: 5px;width: 80px;}
+	.qyxy_datebaseBox02 .box .bd table th:nth-child(2){font-size: 12px;padding-right: 5px;width: 80px;}
+	
+}
+@media (max-width: 320px) {
+
+}

@@ -1,0 +1,194 @@
+<style type="text/css">
+
+	.breadcrumb{display: none;}
+
+</style>
+
+<div class="main_bg">
+
+	<div class="main clearfix">
+
+		<div class="qyxy_datebaseBox01 center clearfix">
+
+			<div class="hd">
+
+				<img src="../Public/images/pic01.png"/>
+
+			</div>
+
+			<div class="bd" style="max-width:80%;">
+
+				<form method="GET" action="/">
+
+					<input type="hidden" id="" name="m" value="Search" /> 
+
+					{if APP_LANG}
+
+					<input type="hidden" name="l" value="{$l}" /> 
+
+					{/if}
+
+					<input type="hidden" name="id" value="{$catid}" /> 
+
+					<input type="hidden" name="type" value="" /> 
+
+					<div class="type clearfix">
+
+						<label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module==Credit||$module==number}checked="checked"{/if} value="{$Categorys[$T[credit]][module]}" /><span class="arrow-bottom-b">示范单位</span></label>
+
+						<label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module==Certification}checked="checked"{/if} value="{$Categorys[$T[certification]][module]}" /><span class="arrow-bottom-b">重点单位</span></label>
+
+	                    <label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module==Cultivation}checked="checked"{/if} value="{$Categorys[$T[cultivation]][module]}" /><span class="arrow-bottom-b">培育单位</span></label>
+	                    <label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module=='experimental'}checked="checked"{/if} value="experimental" /><span class="arrow-bottom-b">试点单位</span></label>
+
+						<label><input type="radio" name="module" id="" data-keyword="信用编码" value="number" /><span  class="arrow-bottom-b">信用编码</span></label>
+
+					</div>
+
+					<div class="block clearfix relative">
+
+						<span><input type="text" name="keyword" id="" value="" placeholder="请输入企业名称"/></span>
+
+						<span class="right"><button type="submit" class="noradius noborder"><img src="../Public/images/search.png"/>查询</button></span>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	
+
+		<div class="qyxy_datebaseBox02 clearfix">
+
+			<div class="box">
+
+				<div class="hd" style="background-image: url(../Public/images/bg4.jpg);">
+
+					<div class="clearfix">
+
+						<a href="{$Categorys[$T[apply]][url]}" class="btn right">我要提交</a>
+
+						<h2>{if $module==Credit}全国信用试点示范单位{elseif $module==Certification}全国信用重点单位{elseif $module==Cultivation}全国信用培育单位{elseif $module=='experimental'}全国信用试点单位{else}{/if}</h2>
+
+					</div>
+
+				</div>
+
+				<div class="bd center">
+
+					{if $count!=0||$ccount!=0}
+
+					<table border="0" cellspacing="0" cellpadding="0" style="margin-top:-39px">
+
+						<tr>
+
+							<th style="text-align: left;">企业名称</th>
+
+							<th>信用编码</th>
+
+							<th>信用分数</th>
+
+							<th>{if $module==Cultivation}审核日期{else}颁发日期{/if}</th>
+
+							<th>有效期至</th>
+
+							<th width="95">{if $module==Cultivation}详情{else}证书详情{/if}</th>
+
+						</tr>
+
+						<volist name="list" id="r" field="*">
+
+							<tr>
+
+								<td style="text-align: left;">
+
+									{if $module==Cultivation}
+
+									{$r.title}
+
+									{else}
+
+									<a href="{$r.url}" target="_blank">{$r.title}</a>
+
+									{/if}
+
+								</td>
+
+								<td>{$r.number}</td>
+
+								<td>{:($r['grade'] > 0) ? $r['grade'] : '-'}</td>
+
+								<td>{$r.realtime|toDate=###,'Y-m-d'}</td>
+
+								<td>{$r.effecttime|toDate=###,'Y-m-d'}</td>
+
+								<td>{if $module==Cultivation}<span style="">培育中</span>{elseif $module==experimental}<span style="">试点中</span>{else}<a href="{$r.url}" target="_blank">查看</a>{/if}</td>
+
+							</tr>
+
+						</volist>
+
+					</table>
+
+					{else}
+
+					<h2 style="font-size: 22px;margin: 20px;">没有搜索到对应企业</h2>
+
+					{/if}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	
+
+		<div class="qyxy_datebaseBox03 clearfix">
+
+			<div class="hd">
+
+				<h2>重要提示</h2>
+
+			</div>
+
+			<div class="bd">
+
+				<yp:block pos="Itips"/>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+//	function resetVerifyCode(){
+
+//		var timenow = new Date().getTime();
+
+//		document.getElementById('verifyImage').src='./index.php?g=Home&m=Index&a=verify#'+timenow;
+
+//	}
+
+	$(".qyxy_datebaseBox01 input[type=radio]").focus(function(){
+
+		$(".searchkeyword").text($(this).attr('data-keyword')+'：');
+
+		if($(this).val()=='number'){
+
+			$("input[name=type]").val('number')
+
+		}
+
+	});
+
+	
+
+</script>

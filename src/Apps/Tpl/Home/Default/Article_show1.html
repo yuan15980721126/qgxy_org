@@ -1,0 +1,52 @@
+<div class="main clearfix">
+				<div class="mainContentLeft">
+					<div class="news_show border_ddd clearfix">
+						<style type="text/css">
+							@media (max-width: 640px) {
+								.mainContentRight{display: none;}
+							}
+						</style>
+						<div class="hd center">
+							<h1 class="title">{$title}</h1>
+							<span class="time">发布时间： {$createtime|toDate=###,'Y-m-d H:i:s'}</span>
+						</div>
+						<div class="bd">{$content}</div>
+					</div>
+				</div>
+				<!--右侧公共部分-->
+				<div class="mainContentRight">
+					<div class="box02">
+						<div class="hd">
+							<h2>{$catname}</h2>
+						</div>
+						<div class="bd border_ddd">
+							<ul>
+								<YP:list catid="catid" id="r" order="listorder asc, id asc">
+									<li {if $id==$r['id']}class="cur"{/if}><a href="{$r.url}">{$r.title}</a></li>
+								</YP:list>
+							</ul>
+						</div>
+					</div>
+					<div class="box01">
+						<div class="block clearfix font0">
+							<a href="/news/show/19.html" class="btn1"><em class="sprite icon1"></em><strong>办事指南</strong></a>
+							<a href="{$Categorys[4][url]}" class="btn1"><em class="sprite icon2"></em><strong>申请入会</strong></a>
+							<a href="{$Categorys[47][url]}" class="btn1"><em class="sprite icon3"></em><strong>资料下载</strong></a>
+						</div>
+						<div class="block clearfix">
+							<a href="{$Categorys[3][url]}" target="_blank" class="btn2"><em class="sprite icon1"></em><strong style="letter-spacing: 6px;">企业信用评级</strong></a>
+							<a href="{$Categorys[3][url]}" target="_blank" class="btn2"><em class="sprite icon2"></em><strong>重点企业信用认证</strong></a>
+							<a href="{$Categorys[2][url]}" target="_blank" class="btn2"><em class="sprite icon3"></em><strong style="letter-spacing: 6px;">企业信用报名</strong></a>
+						</div>
+						<div class="img-responsive">
+							<YP:blockdetail pos="ibg1" id="r">
+							<a href="{$r.link}">
+								<img src="{$r.image2}"/>
+							</a>
+							</YP:blockdetail>
+						</div>
+					</div>
+				</div>
+				<!--右侧公共部分-->
+				
+			</div>

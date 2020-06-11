@@ -1,0 +1,31 @@
+<div class="main clearfix">
+	<div class="mainContentLeft">
+		<div class="border_ddd clearfix">
+			<div class="leaveMessage" id="box3">
+				<form method="post"  action="{:URL('User-Post/insert')}" id="detailForm" >
+					<legend class="center font18">我要留言</legend>
+			          <input type="hidden"  name="catid" value="{$catid}" />
+			          <input type="hidden"  name="moduleid" value="8" />
+			          <input type="hidden"  name="lang" value="{$langid}" />
+			            <ul class="form">
+			              <li><span>标&nbsp;&nbsp;&nbsp;&nbsp;题：<b class="red">*</b></span><input type="text" name="title" required="required"></li>
+			              <li><span>内&nbsp;&nbsp;&nbsp;&nbsp;容：<b class="red">*</b></span><textarea name="content" required="required"></textarea></li>
+			              <li><span>姓&nbsp;&nbsp;&nbsp;&nbsp;名：<b class="red">*</b></span><input type="text" name="username" required="required"></li>
+			              <li><span>联系方式：<b class="red">*</b></span><input type="text" name="telephone" required="required"></li>
+			              <li>
+			              	<span></span>
+			              	<p class="center">
+		              			<input type="submit" name="" id="" value="提交" />
+				              	<input type="reset" name="" id="" value="重置" />
+			              	</p>
+			              </li>
+			            </ul>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<!--右侧公共部分-->
+	<include file="Home:mainright"/>
+	<!--右侧公共部分-->
+	
+</div>

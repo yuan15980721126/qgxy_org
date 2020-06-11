@@ -1,0 +1,45 @@
+<div class="main clearfix">
+		{if $child}
+		<div class="mainContentLeft">
+			<div class="news_list border_ddd clearfix">
+				<ul>
+					<YP:subcat catid="catid" id="r">
+						<YP:list sql="select * from mqu_article where catid=$r[id]  order by listorder desc,id desc limit 5"  id="rd" key="k">
+						<li><a href="{$rd.url}">{$rd.title}</a></li>
+						{if $k==5}
+						<li><hr /></li> 
+						{/if}
+						</YP:list>
+					</YP:subcat>
+				</ul>
+			</div>
+		</div>
+		{else}
+		<div class="mainContentLeft">
+			<div class="news_list border_ddd clearfix">
+				<ul>
+					<volist name="list" catid="catid" id="r">
+					<li><a href="{$r.url}">{$r.title}</a></li>
+					</volist>
+				</ul>
+			</div>
+			{if $count!=0}
+			<div class="page clearfix">
+				<div class="left">
+					<span style="color: #00227E;">{$count}</span>条&nbsp;&nbsp;共<span style="color: #00227E;">{$pageNum}</span>页
+				</div>
+				<div class="right">
+					<ul class="pages">
+						{$pages}
+					</ul>
+				</div>
+			</div>
+			{/if}
+		</div>
+		{/if}
+	
+	<!--右侧公共部分-->
+	<include file="Home:mainright"/>
+	<!--右侧公共部分-->
+	
+</div>

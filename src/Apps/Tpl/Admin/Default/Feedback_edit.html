@@ -1,0 +1,113 @@
+
+
+<style type="text/css">
+.form {max-width: 600px;padding: 20px 0;}
+.form li{margin-bottom:10px;display:table;width:100%;position: relative;}
+.form span{line-height:26px;width:100px;display:table-cell;vertical-align:top;text-justify: inter-ideograph;text-align: justify;}
+.form input{height:26px;line-height:26px;color:#575757;border:1px solid #d6d6d6;width:100%;display:table-cell;}
+.form textarea{line-height:20px;font-size:14px;color:#575757;width:100%;height:132px;resize:none;display:table-cell;border:1px solid #d6d6d6;}
+.form input[type=reset],
+.form input[type=submit]{letter-spacing: 5px; font-size: 16px;width: auto;padding: 0 30px;margin: 30px 5px; background: #c40001;color: #fff;border-radius: 5px !important; border: none;}
+.form input[type=reset]{background: #ccc;color: #333;}
+.form input[type=radio]{display: inline-block;width: auto; margin-top: -3px;}
+.form em{position: absolute;right: -35px;top: 7px;font-style: normal;}
+</style>
+
+<form name="myform" id="myform" action="<if condition="$action_name=='add'">{:U($module_name.'/insert')}<else />{:U($module_name.'/update')}</if>" method="post">
+
+<ul class="form">
+						<li>
+							<span style="margin: 15px auto;display: inline-block; font-size: 18px;">企业信息</span>
+						</li>
+						<li>
+							<span>企业名称</span>
+							<input type="text" value="{$vo.companyname}">
+						</li>
+						<li>
+							<span>企业类型</span>
+							<input type="text" value="{$vo.companytype}">
+						</li>
+						<li>
+							<span>工商注册号码</span>
+							<input type="text" value="{$vo.registernumber}">
+						</li>
+						<li>
+							<span>组织机构代码</span>
+							<input type="text" value="{$vo.code}">
+						</li>
+						<li>
+							<span>企业住所</span>
+							<input type="text" value="{$vo.address}">
+						</li>
+						<li>
+							<span>法定代表人</span>
+							<input type="text" value="{$vo.legalperson}">
+						</li>
+						<li class="relative}">
+							<span>注册资金</span>
+							<input type="text" value="{$vo.registercapital}">
+							<em>万元</em>
+						</li>
+						<li>
+							<span>成立日期</span>
+							<input type="text" value="{$vo.date}">
+						</li>
+						<li>
+							<span>经营期限</span>
+							<input type="text" value="{$vo.dateto}">
+						</li>
+						<li>
+							<span>经营范围</span>
+							<input type="text" value="{$vo.range}">
+						</li>
+						
+						<li>
+							<span style="margin: 15px auto;display: inline-block; font-size: 18px;}">联系人信息</span>
+						</li>
+						<li>
+							<span>联系人</span>
+							<input type="text" value="{$vo.username}">
+						</li>
+						<li>
+							<span>职务</span>
+							<input type="text" value="{$vo.job}">
+						</li>
+						<li>
+							<span>办公室电话</span>
+							<input type="tel" value="{$vo.telephone}">
+						</li>
+						<li>
+							<span>手机</span>
+							<input type="tel" value="{$vo.ceilphone}">
+						</li>
+						<li>
+							<span>QQ号码</span>
+							<input type="tel" value="{$vo.qq}">
+						</li>
+						<li>
+							<span>电子邮箱</span>
+							<input type="email" value="{$vo.email}">
+						</li>
+						<li>
+							<span>提交时间</span>
+							<input class="Wdate input-text valid" validate="required:true" name="createtime" id="createtime" size="25" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$vo.createtime|toDate=###,'Y-m-d H:m:s'}" type="text">
+						</li>
+						<li>
+							<span>状态</span>
+							<label style="float:left;width:105px" class="checkbox_status"><input class="input_radio " name="status" id="status_1" value="1" type="radio"> 已审核</label>
+							<label style="float:left;width:105px" class="checkbox_status"><input class="input_radio " name="status" id="status_2" checked="" value="0" type="radio"> 未审核</label>
+						</li>
+					</ul>
+<div id="bootline"></div>
+<div id="btnbox" class="btn">
+<if condition="$vo['id']!=''"><input TYPE="hidden" name="id" value="{$vo.id}"></if>
+ 
+<input type='hidden' name='{$parentModuleKey}' value='{$parentModuleValue}'>
+<input type="hidden"  name="lang" value="{$langid}" />
+<input type="hidden" name="forward" value="{$_SERVER['HTTP_REFERER']}" />
+<input type="submit"  value="{:L('dosubmit')}" class="button" >
+<input type="reset"  value="{:L('cancel')}" class="button">
+
+</div>
+</form>
+</body></html>

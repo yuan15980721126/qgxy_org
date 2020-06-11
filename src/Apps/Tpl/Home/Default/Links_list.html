@@ -1,0 +1,47 @@
+<div id="news">
+<main>
+  <ul class="maincontent">
+    <li id="subnav1" data-title="News" style="background: #f5f7f8 url(../Public/images/new_bg.jpg) no-repeat center center;">
+      <div class="page_headline_block">
+        <h3 class="bai">News</h3>
+        <div  class="text bai">
+        	Read the latest news of Egoal. We provide insights of internal and external events, fairs and meetings, but also of activities in the single bureaus and countries. Furthermore you can read about our newest technologies for freight forwarding, new Egoal offices or programs and certificates.
+        </p>
+          
+        </div>
+        <a href="#learn_more" class="btn_learn_more">learn more</a> 
+      </div>
+    </li>
+    <!--2-->
+    <li id="subnav2" data-title="new list" style="background: #FFFFFF ;">
+      <div class="new clearfix">
+      	<volist name="list" id="r">
+		<dl>
+			<dt><img src="{$r.thumb}"  width="100%"/></dt>
+			<dd>
+				<a href="{$r.url}"><h3>{$r.createtime|toDate=###,'Y-m'} | {$r.title}</h3></a>
+				<p>{$r.description}</p>
+				<a href="{$r.url}">&gt read more</a>
+			</dd>
+		</dl>
+      	</volist>
+      
+      </div>
+      <div class="huanye">
+      	{$pages}
+      	
+      </div>
+      
+      
+      
+    </li>
+   
+
+  </ul>
+</main>
+
+
+
+
+</div>
+

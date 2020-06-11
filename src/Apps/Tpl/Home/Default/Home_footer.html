@@ -1,0 +1,170 @@
+<footer>
+
+	<div class="footer01">
+
+		<div class="container">
+
+			<!--<div class="row">
+
+				<div class="col-sm-12 col-md-6">
+
+					<yp:blockdetail id="r" pos="fb01">{$r.content}</yp:blockdetail>
+
+				</div>
+
+				<div class="col-sm-12 col-md-6">
+
+					<div class="text-right right">
+
+						<a href="">京ICP备17046088号</a>
+
+						<p><a href="http://mqu.cn" target="_blank" style="color: #b0b0b0;">Design by MQU.CN</a></p>
+
+					</div>
+
+				</div>
+
+			</div>-->
+
+			<div class="row center">
+				<yp:blockdetail id="r" pos="fb01">{$r.content}</yp:blockdetail>
+
+				<p><a href="http://mqu.cn" target="_blank" style="color: #b0b0b0;display:none; ">Design by MQU.CN</a></p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+	$("#keyword").css("color", "#666");
+
+	        	$("#keyword").attr('placeholder','请输入信息关键字');
+
+//	        	$(".search_Index ul li").click(function () {
+
+//	        	 	$(this).addClass('cur').siblings('li').removeClass('cur');
+
+//                  $("#keyword").attr('placeholder',$(this).attr('placeholder'));
+
+//	            });	
+
+	        	
+
+	        	if (!placeholderSupport()) { // 判断浏览器是否支持 placeholder
+
+					$('[placeholder]').focus(function() {
+
+						var input = $(this);
+
+						if (input.val() == input.attr('placeholder')) {
+
+							input.val('');
+
+							input.removeClass('placeholder');
+
+						}
+
+					}).blur(function() {
+
+						var input = $(this);
+
+						if (input.val() == '' || input.val() == input.attr('placeholder')) {
+
+							input.addClass('placeholder');
+
+							input.val(input.attr('placeholder'));
+
+						}
+
+					}).blur();
+
+				};
+
+				function placeholderSupport() {
+
+						return 'placeholder' in document.createElement('input');
+
+				}
+
+				
+
+				
+
+				$(".newbox02 .hd li").hover(function(){
+
+					$(this).addClass('cur').siblings().removeClass('cur');
+
+					$(this).closest('.newbox02').find('.bd ul').eq($(this).index()).show().siblings('ul').hide();
+
+				});
+
+				$(".mobile .tab_list > li").click(function(){
+
+					$(this).addClass('cur').siblings().removeClass('cur');
+
+					$(this).closest('.mobile').find('.tab_content > li').eq($(this).index()).show().siblings('li').hide();
+
+				});
+
+				$(".agency .hd h2").click(function(){
+
+					$(this).addClass('cur').siblings().removeClass('cur');
+
+					$(this).closest('.agency').find('.bd ul').eq($(this).index()).show().siblings('ul').hide();
+
+				});
+
+				$("#slide1").owlCarousel({
+
+					items: 1,
+
+					autoplay: true,
+
+					loop: true,
+
+					nav: false,
+
+					dots: false,
+
+					autoplayTimeout: 3000,
+
+					smartSpeed: 800
+
+				});
+
+				if($(document).width()<768){
+
+					$(".agency .bd ul").owlCarousel({
+
+						items: 1,
+
+						autoplay: true,
+
+						loop: true,
+
+						nav: false,
+
+						dots: false,
+
+						autoplayTimeout: 3000,
+
+						smartSpeed: 800
+
+					});
+
+				}
+
+</script>
+
+</body>
+
+</html>

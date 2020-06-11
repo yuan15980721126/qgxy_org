@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="description" content="{$seo_description}">
+	<meta name="keywords" content="{$seo_keywords}">
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit"><!--360 极速模式-->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+	<title>{$seo_title}</title>
+
+	<link rel="shortcut icon" href="/Apps/Tpl/Home/Default/Public/images/logo3.png" />
+
+	<link href="../Public/css/owl.carousel.2.2.1.css" rel="stylesheet" type="text/css" />
+
+	<link href="../Public/css/reset.css" rel="stylesheet" type="text/css" />
+
+	<link href="../Public/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../Public/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	{if $module_name==Index}
+
+	<link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
+
+	{/if}
+
+	<link href="../Public/css/app.css" rel="stylesheet" type="text/css" />
+
+	<!--[if lt IE 9]>
+
+	<script src="../Public/js/html5.js"></script>
+
+	<script src="../Public/js/respond.min.js"></script>
+
+	<![endif]-->
+
+	<script type="text/javascript" src="../Public/js/jquery-min.js"></script>
+
+	<script src="../Public/js/owl.carousel.2.2.1.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<header>
+
+	<div class="header01">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="left">
+
+					<YP:list name="Link" id="r" order="listorder desc,id desc" limit="3" key="k" field="*">
+
+						<a href="{$r.siteurl}" target="_blank">{$r.name}</a>{if $k<3}  | {/if}
+
+					</YP:list>
+
+				</div>
+
+				<div class="right">
+
+					<a href="/">网站首页</a>｜
+
+					<a href="{$Categorys[$T[contact]][url]}">{$Categorys[$T[contact]][catname]}</a>｜
+
+					<a href="{$Categorys[$T[apply]][url]}">信用报名</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+{if $catid!=0}
+	<div class="header02" style="background-image: url(../Public/images/banner01.jpg);">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="img-responsive">
+					<a href="/"><img width="68" class="logo1" src="../Public/images/logo3.png" /><img src="{$logo}"/></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{/if}
+	</header>
+
+
+
+<style type="text/css">
+		.header02{padding: 15px 0;vertical-align: middle;}
+		.pull-left{float: left;}
+		.footer01{background: #164d81;}
+	</style>

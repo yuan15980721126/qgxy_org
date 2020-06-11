@@ -1,0 +1,91 @@
+<style type="text/css">
+				.content div {
+					font-weight: bold;
+					position: absolute;
+					color: #030301;
+				}
+				.content .code {left: 48%;top: 30.2%;}
+				.content .companyname {font-size: 34px;left: 0;right: 0;top: 36.5%;margin: auto;}
+				.content .bigname {font-size: 36px;left: 0;right: 0;top: 54%;margin: auto;}
+				.content .code1 {left: 51%;top: 42.3%;}				
+				.content .positon { left: 32%; top: 44.9%; max-width: 56%;text-align: left;}				
+				.content .organize {left: 62%;top: 74.85%;max-width:25%;line-height: 1;text-align: left;letter-spacing: 6px;}
+				.content .organize span{
+					padding-top: 2px;
+					display: block;
+					font-size: 12px;
+				}
+				.content .year1 {left: 62%;top: 84.3%;}				
+				.content .year2 {left: 62%;top: 81%;}				
+				.no {bottom: 2.45%;right: 7%;}
+				.xylogo{
+					position: absolute;
+					    width: 35%;
+    max-width: 100%;
+    bottom: 11%;
+    right: 12%;
+				}
+				@media (max-width: 800px) {
+					.no {right: 4%;}
+				}
+				@media (max-width: 480px) {
+					.no {
+						bottom: 1.2%;
+						font-size: 12px;
+						right: 0;
+					}
+				}
+				
+				@media (max-width: 640px) {
+					.mainContentRight {
+						display: none;
+					}
+					.content div {
+						font-size: 12px;
+						line-height: 1;
+					}
+					.content .companyname {
+						font-size: 18px
+					}
+					.content .bigname {font-size: 17px;}
+					.content .organize {
+						text-align: left;
+						
+					}
+				}
+				
+				@media (max-width: 420px) {
+					.content div {
+						transform: scale(0.7);
+						font-weight: normal;
+					}
+					.content .code {left: 43%;top: 30.5%;}
+					.content .companyname {top: 38.5%;}
+					.content .bigname {top: 55%;font-weight: bold;}
+					.content .code1 {left: 45%;}				
+					.content .positon {left: 25%;}				
+					.content .organize {left: 58%; top: 73%;max-width: 33%;}				
+					.content .year1 {left: 58%;top: 83.5%;}				
+					.content .year2 {left: 58%;top: 80.1%;}				
+					.no {bottom: 3.5%;    right: 2%;}
+				}
+			</style>
+<div class="main clearfix">
+	<div class="mainContentLeft credit_show">
+		<div class="news_show relative">
+			<div class="hd center"></div>
+			<div class="bd">
+				<div class="content inline-block relative"> <img src="../Public/images/zs2.jpg" />
+					<div class="code">{$number}</div>
+					<div class="companyname">{$title}</div>
+					<div class="code1">{$xinyongcode}</div>
+					<div class="positon">{$address}</div>
+					<div class="bigname">信用{$catname}</div>	
+					<div class="year1">{$realtime|toDate=###,'Y 年 m 月 d 日'}</div>
+					<div class="no">{$code}</div>
+					<img class="xylogo" src="../Public/images/whlogo.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
