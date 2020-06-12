@@ -33,7 +33,21 @@
         </if>
 
         </volist>
+    {if $module_name == 'Identification'}
 
+
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*</font>可信名片</td>
+                <td width="90%" id="{$vo.id}">
+                    <YP:list sql="SELECT `*` FROM `mqu_card` WHERE status=1 " id="rd" key="k"  >
+                    <input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="{$rd.id}">{$rd.name}---{$rd.company}<br>
+                    </YP:list>
+                </td>
+            </tr>
+
+
+    {/if}
 </table>
 
 <div id="bootline"></div>

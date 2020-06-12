@@ -1,40 +1,1 @@
-
-
-<form name="myform" id="myform" action="" method="post">
-<div class="table-list">
-    <table width="100%" cellspacing="0">
-        <thead>
-      		<tr>
-      		
-			<th width="40">ID</th>
-			<th width="110" align="center">{:L(USERNAME)}</th>
-			<th width="110" align="center">{:L(IP)}</th>		
-			<th width="180" align="left">{:L(TIME)}</th>
-			<th align="left">{:L(message_title)}</th>
-		 
-      		</tr>
-      	</thead>
-      	<tbody>
-      		<volist name="list" id="vo" key="k">
-      		<tr>
-			<td align="center">{$vo['id']}</td>
-      		<td align="center">{$vo['username']}</td>
-			<td align="center">{$vo['ip']}</td>
-			<td align="left">{$vo['time']|toDate}</td>
-      		<td align="left">{$vo['note']}</td>
-			
-			 
-      		</volist>
-      	</tbody>
-    </table>
-  
-		<div class="btn">
-		<input type="button" class="button" name="dosubmit" value="<?php echo L('DELETE_30_DAY')?>" onclick="myform.action='{:U($module_name.'/delete?day=1')}';$('#myform').submit();"/>
-		<input type="button" class="button" name="dosubmit" value="<?php echo L('DELETE_90_DAY')?>" onclick="myform.action='{:U($module_name.'/delete?day=2')}';$('#myform').submit();"/> </div>  
-	</div>
-</div>
-</form>
-
-<div id="pages" class="page">{$page}</div>
- 
-</body></html>
+<table  class="search_table" width="100%">	<tr>		<td class="search">			<form action="{:U($module_name.'/index')}" method="get">				<input type="hidden" name="g" value="{$Think.GROUP_NAME}" />				<input type="hidden" name="m" value="{$Think.MODULE_NAME}" />				<input type="hidden" name="a" value="{$Think.ACTION_NAME}" />				<input type="hidden" id="moduleid" name="moduleid" value="{$moduleid}" />				<input id="title" type="text" class="input-text" name="keyword" value="{$Think.get.keyword}" />				<select name="searchtype">					<option value="username" <eq name="searchtype" value='username'>selected="selected"</eq>>{:L('username')}</option>					<option value="note" <eq name="searchtype" value='note'>selected="selected"</eq>>{:L(message_title)}</option>				</select>				<input type="submit" value="{:L('chaxun')}"  class="button" />			</form>		</td>	</tr></table><form name="myform" id="myform" action="" method="post"><div class="table-list">    <table width="100%" cellspacing="0">        <thead>      		<tr>      					<th width="40">ID</th>			<th width="110" align="center">{:L(USERNAME)}</th>			<th width="110" align="center">{:L(IP)}</th>					<th width="180" align="left">{:L(TIME)}</th>			<th align="left">{:L(message_title)}</th>		       		</tr>      	</thead>      	<tbody>      		<volist name="list" id="vo" key="k">      		<tr>			<td align="center">{$vo['id']}</td>      		<td align="center">{$vo['username']}</td>			<td align="center">{$vo['ip']}</td>			<td align="left">{$vo['time']|toDate}</td>      		<td align="left">{$vo['note']}</td>						       		</volist>      	</tbody>    </table>  		<div class="btn">		<input type="button" class="button" name="dosubmit" value="<?php echo L('DELETE_30_DAY')?>" onclick="myform.action='{:U($module_name.'/delete?day=1')}';$('#myform').submit();"/>		<input type="button" class="button" name="dosubmit" value="<?php echo L('DELETE_90_DAY')?>" onclick="myform.action='{:U($module_name.'/delete?day=2')}';$('#myform').submit();"/> </div>  	</div></div></form><div id="pages" class="page">{$page}</div> </body></html>

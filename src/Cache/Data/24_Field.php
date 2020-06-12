@@ -1,61 +1,55 @@
 <?php
-return array ( 'catid' => array ( 'id' => '354', 'moduleid' => '24', 'field' => 'catid', 'name' => '栏目', 'tips' => '', 'required' => '1', 'minlength' => '1', 'maxlength' => '6', 'pattern' => '', 'errormsg' => '必须选择一个栏目', 'class' => '', 'type' => 'catid', 'setup' => '', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '1', ), 'title' => array ( 'id' => '355', 'moduleid' => '24', 'field' => 'title', 'name' => '标题', 'tips' => '', 'required' => '1', 'minlength' => '1', 'maxlength' => '80', 'pattern' => '', 'errormsg' => '标题必须为1-80个字符', 'class' => '', 'type' => 'title', 'setup' => 'array (
-  \'thumb\' => \'1\',
-  \'style\' => \'1\',
-  \'size\' => \'55\',
-)', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '1', ), 'keywords' => array ( 'id' => '356', 'moduleid' => '24', 'field' => 'keywords', 'name' => '关键词', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '80', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
-  \'size\' => \'55\',
+return array ( 'img' => array ( 'id' => '389', 'moduleid' => '24', 'field' => 'img', 'name' => '头像', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'image', 'setup' => 'array (
+  \'size\' => \'\',
+  \'default\' => \'\',
+  \'upload_maxsize\' => \'\',
+  \'upload_allowext\' => \'jpg,jpeg,gif,png\',
+  \'watermark\' => \'0\',
+  \'more\' => \'1\',
+  \'cc\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'name' => array ( 'id' => '390', 'moduleid' => '24', 'field' => 'name', 'name' => '名称', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+  \'size\' => \'\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',
   \'fieldtype\' => \'varchar\',
-)', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '2', 'status' => '1', 'issystem' => '1', ), 'description' => array ( 'id' => '357', 'moduleid' => '24', 'field' => 'description', 'name' => 'SEO简介', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'textarea', 'setup' => 'array (
-  \'fieldtype\' => \'mediumtext\',
-  \'rows\' => \'4\',
-  \'cols\' => \'55\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'company' => array ( 'id' => '391', 'moduleid' => '24', 'field' => 'company', 'name' => '公司', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+  \'size\' => \'\',
   \'default\' => \'\',
-)', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '3', 'status' => '1', 'issystem' => '1', ), 'video' => array ( 'id' => '367', 'moduleid' => '24', 'field' => 'video', 'name' => '首页视频', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'file', 'setup' => 'array (
-  \'size\' => \'100\',
-  \'default\' => \'为保证视频正常播放，请上传视频编码格式为h.264的mp4视频\',
-  \'upload_maxsize\' => \'50\',
-  \'upload_allowext\' => \'mp4\',
-  \'more\' => \'1\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '5', 'status' => '1', 'issystem' => '0', ), 'content' => array ( 'id' => '358', 'moduleid' => '24', 'field' => 'content', 'name' => '内容', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
-  \'toolbar\' => \'full\',
+  \'ispassword\' => \'0\',
+  \'fieldtype\' => \'varchar\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'tel' => array ( 'id' => '393', 'moduleid' => '24', 'field' => 'tel', 'name' => '电话', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+  \'size\' => \'\',
   \'default\' => \'\',
-  \'height\' => \'\',
-  \'showpage\' => \'1\',
-  \'enablekeylink\' => \'0\',
-  \'replacenum\' => \'\',
-  \'enablesaveimage\' => \'0\',
-  \'flashupload\' => \'1\',
-  \'alowuploadexts\' => \'\',
-)', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '10', 'status' => '0', 'issystem' => '1', ), 'createtime' => array ( 'id' => '359', 'moduleid' => '24', 'field' => 'createtime', 'name' => '发布时间', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'datetime', 'setup' => '', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '1', 'issystem' => '1', ), 'recommend' => array ( 'id' => '360', 'moduleid' => '24', 'field' => 'recommend', 'name' => '允许评论', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '1', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'radio', 'setup' => 'array (
-  \'options\' => \'允许评论|1
-不允许评论|0\',
-  \'fieldtype\' => \'tinyint\',
-  \'numbertype\' => \'1\',
-  \'labelwidth\' => \'\',
+  \'ispassword\' => \'0\',
+  \'fieldtype\' => \'varchar\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'wachat' => array ( 'id' => '394', 'moduleid' => '24', 'field' => 'wachat', 'name' => '微信号', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+  \'size\' => \'\',
   \'default\' => \'\',
-)', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '0', 'issystem' => '0', ), 'readpoint' => array ( 'id' => '361', 'moduleid' => '24', 'field' => 'readpoint', 'name' => '阅读收费', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '5', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'number', 'setup' => 'array (
-  \'size\' => \'5\',
-  \'numbertype\' => \'1\',
-  \'decimaldigits\' => \'0\',
-  \'default\' => \'0\',
-)', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '0', 'issystem' => '0', ), 'hits' => array ( 'id' => '362', 'moduleid' => '24', 'field' => 'hits', 'name' => '点击次数', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '8', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'number', 'setup' => 'array (
-  \'size\' => \'10\',
-  \'numbertype\' => \'1\',
-  \'decimaldigits\' => \'0\',
-  \'default\' => \'0\',
-)', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '0', 'issystem' => '0', ), 'readgroup' => array ( 'id' => '363', 'moduleid' => '24', 'field' => 'readgroup', 'name' => '访问权限', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'groupid', 'setup' => 'array (
-  \'inputtype\' => \'checkbox\',
-  \'fieldtype\' => \'tinyint\',
-  \'labelwidth\' => \'85\',
+  \'ispassword\' => \'0\',
+  \'fieldtype\' => \'varchar\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'email' => array ( 'id' => '395', 'moduleid' => '24', 'field' => 'email', 'name' => '联系邮箱', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+  \'size\' => \'\',
   \'default\' => \'\',
-)', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '96', 'status' => '0', 'issystem' => '1', ), 'posid' => array ( 'id' => '364', 'moduleid' => '24', 'field' => 'posid', 'name' => '推荐位', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'posid', 'setup' => '', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '97', 'status' => '0', 'issystem' => '1', ), 'template' => array ( 'id' => '365', 'moduleid' => '24', 'field' => 'template', 'name' => '模板', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'template', 'setup' => '', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '98', 'status' => '0', 'issystem' => '1', ), 'status' => array ( 'id' => '366', 'moduleid' => '24', 'field' => 'status', 'name' => '状态', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'radio', 'setup' => 'array (
-  \'options\' => \'发布|1
-定时发布|0\',
+  \'ispassword\' => \'0\',
+  \'fieldtype\' => \'varchar\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'introduce' => array ( 'id' => '396', 'moduleid' => '24', 'field' => 'introduce', 'name' => '个人简介', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'textarea', 'setup' => 'array (
+  \'fieldtype\' => \'text\',
+  \'rows\' => \'10\',
+  \'cols\' => \'100\',
+  \'default\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'qr_code' => array ( 'id' => '397', 'moduleid' => '24', 'field' => 'qr_code', 'name' => '微信二维码', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'image', 'setup' => 'array (
+  \'size\' => \'\',
+  \'default\' => \'\',
+  \'upload_maxsize\' => \'\',
+  \'upload_allowext\' => \'jpg,jpeg,gif,png\',
+  \'watermark\' => \'0\',
+  \'more\' => \'0\',
+  \'cc\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'createtime' => array ( 'id' => '387', 'moduleid' => '24', 'field' => 'createtime', 'name' => '发布时间', 'tips' => '', 'required' => '1', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'datetime', 'setup' => '', 'ispost' => '0', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '1', 'issystem' => '1', ), 'status' => array ( 'id' => '388', 'moduleid' => '24', 'field' => 'status', 'name' => '状态', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'radio', 'setup' => 'array (
+  \'options\' => \'已审核|1
+未审核|0\',
   \'fieldtype\' => \'tinyint\',
   \'numbertype\' => \'1\',
   \'labelwidth\' => \'75\',
   \'default\' => \'1\',
-)', 'ispost' => '1', 'unpostgroup' => '3,4', 'listorder' => '99', 'status' => '1', 'issystem' => '1', ), ); ?>
+)', 'ispost' => '0', 'unpostgroup' => '3,4', 'listorder' => '99', 'status' => '1', 'issystem' => '1', ), ); ?>

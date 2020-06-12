@@ -87,7 +87,19 @@ function confirm_delete(url){
                 </td>
 
             </tr><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+    <?php if($module_name == 'Identification') : ?>
 
+
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*</font>可信名片</td>
+                <td width="90%" id="<?php echo ($vo["id"]); ?>">
+                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_card` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["name"]); ?>---<?php echo ($rd["company"]); ?><br><?php endforeach; endif;?>
+                </td>
+            </tr>
+
+
+    <?php endif;?>
 </table>
 
 <div id="bootline"></div>

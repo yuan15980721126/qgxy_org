@@ -1,33 +1,1 @@
-<?php
-/**
- *
- * Login(后台登陆记录)
- *
- * @package      	YOURPHP
- * @author          liuxun QQ:147613338 <web@yourphp.cn>
- * @copyright     	Copyright (c) 2008-2011  (http://www.yourphp.cn)
- * @license         http://www.yourphp.cn/license.txt
- * @version        	YourPHP企业网站管理系统 v2.1 2012-10-08 yourphp.cn $
- */
-if(!defined("Yourphp")) exit("Access Denied");
-class LogAction extends  AdminbaseAction {
-    function _initialize()
-    {	
-		parent::_initialize();
-    }
-	function delete(){
-		$day=intval($_GET['day']);
-		if($day==1){
-			$time = time()-60*60*24*30;
-		}elseif($day==2){
-			$time =  time()-60*60*24*90;
-		}else{
-			$this->error (L('do_empty'));
-		}
-
-		M(MODULE_NAME)->where("time < $time")->delete();
-		$this->success(L('delete_ok'));
-
-	}
- 
-}
+<?php/** * * Login(后台登陆记录) * * @package      	YOURPHP * @author          liuxun QQ:147613338 <web@yourphp.cn> * @copyright     	Copyright (c) 2008-2011  (http://www.yourphp.cn) * @license         http://www.yourphp.cn/license.txt * @version        	YourPHP企业网站管理系统 v2.1 2012-10-08 yourphp.cn $ */if(!defined("Yourphp")) exit("Access Denied");class LogAction extends  AdminbaseAction {    function _initialize()    {			parent::_initialize();    }	function delete(){        //新增只有超级管理员才有权限删除日志        if($_SESSION['groupid'] !== 1){            $this->error(L('_VALID_ACCESS_'));        }		$day=intval($_GET['day']);		if($day==1){			$time = time()-60*60*24*30;		}elseif($day==2){			$time =  time()-60*60*24*90;		}else{			$this->error (L('do_empty'));		}		M(MODULE_NAME)->where("time < $time")->delete();		$this->success(L('delete_ok'));	}    public function index() {        $name = MODULE_NAME;        $model = M ($name);        $id=$model->getPk ();        //echo '<pre>';        //print_R($fields);        $keyword=$_GET['keyword'];        $searchtype=$_GET['searchtype'];//        $type =intval($_GET['type']);        $this->assign($_GET);        if(!empty($keyword) && !empty($searchtype)){            $where[$searchtype]=array('like','%'.$keyword.'%');        }//        if(!empty($type)){//            $where['type']=$type;//        }        $count = $model->where($where)->count();        import ( "@.ORG.Page" );        $p = new Page ( $count, 15 );        unset($_GET[C('VAR_PAGE')]);        $map=$_GET;        $map[C('VAR_PAGE')]='{$page}';        $p->urlrule = U($name.'/index',$map);        $page = $p->show ();        $list=$model->order('id')->where($where)            ->limit($p->firstRow.','.$p->listRows)->order("id DESC")->select();        //echo $model->getlastsql();        $this->assign('list', $list);        $this->assign ( 'page', $page );        $this->display();    } }
