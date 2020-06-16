@@ -194,8 +194,8 @@ class SearchAction extends BaseAction
 
 				}else{
 
-					//$where .= ' AND title like "%'.$keyword.'%" ';
-                    $where .= ' AND title = '.'"'.$keyword.'"';
+					$where .= ' AND title like "%'.$keyword.'%" ';
+//                    $where .= ' AND title = '.'"'.$keyword.'"';
 
 				}
 
@@ -216,7 +216,6 @@ class SearchAction extends BaseAction
 
 
 		$count = $this->dao->where($where)->count();
-
 		$this->assign('count',$count);
 
 		$this->assign('ccount', $tcount);
@@ -250,7 +249,6 @@ class SearchAction extends BaseAction
 			$field =  $field ? $field : '*';
 
 			$list = $this->dao->field($field)->where($where)->order('id desc')->limit($page->firstRow . ',' . $page->listRows)->select();
-
 
 			if($dao)
 

@@ -93,8 +93,52 @@ function confirm_delete(url){
             <tr class="attribute_list">
                 <td width="10%">
                     <font color="red">*</font>可信名片</td>
-                <td width="90%" id="<?php echo ($vo["id"]); ?>">
+                <td width="90%" id="">
                     <?php  $_result=M()->query("SELECT `*` FROM `mqu_card` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["name"]); ?>---<?php echo ($rd["company"]); ?><br><?php endforeach; endif;?>
+                </td>
+            </tr>
+
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*</font>企业实力-概览</td>
+                <td width="90%" id="">
+                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 1 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="overview"  <?php if (in_array($rd['id'], $overview_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                        <?php for($i=1;$i<=8;$i++){?>
+                            <?php if(!empty($rd['image_'.$i])){?>
+                            <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->
+                            标题:<?php echo $rd['title_'.$i];?>&nbsp;&nbsp;---说明:<?php echo $rd['desc_'.$i];?>&nbsp;&nbsp;
+                            <?php }?>
+                        <?php }?>
+                        <br><?php endforeach; endif;?>
+                </td>
+            </tr>
+
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*</font>企业实力-认证许可</td>
+                <td width="90%" id="">
+                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 2 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="license"  <?php if (in_array($rd['id'], $license_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                        <?php for($i=1;$i<=8;$i++){?>
+                        <?php if(!empty($rd['image_'.$i])){?>
+                        <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->
+                        标题:<?php echo $rd['title_'.$i];?>&nbsp;&nbsp;---说明:<?php echo $rd['desc_'.$i];?>&nbsp;&nbsp;
+                        <?php }?>
+                        <?php }?>
+                        <br><?php endforeach; endif;?>
+                </td>
+            </tr>
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*</font>企业实力-知识产权</td>
+                <td width="90%" id="">
+                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 3 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="intellectual"  <?php if (in_array($rd['id'], $intellectual_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                        <?php for($i=1;$i<=8;$i++){?>
+                        <?php if(!empty($rd['image_'.$i])){?>
+                        <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->
+                        标题:<?php echo $rd['title_'.$i];?>&nbsp;&nbsp;---说明:<?php echo $rd['desc_'.$i];?>&nbsp;&nbsp;
+                        <?php }?>
+                        <?php }?>
+                        <br><?php endforeach; endif;?>
                 </td>
             </tr>
 
