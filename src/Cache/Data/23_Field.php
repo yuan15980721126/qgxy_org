@@ -1,10 +1,10 @@
 <?php
-return array ( 'title' => array ( 'id' => '369', 'moduleid' => '23', 'field' => 'title', 'name' => '公司名称', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+return array ( 'catid' => array ( 'id' => '435', 'moduleid' => '23', 'field' => 'catid', 'name' => '栏目', 'tips' => '', 'required' => '1', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'catid', 'setup' => '', 'ispost' => '1', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'title' => array ( 'id' => '369', 'moduleid' => '23', 'field' => 'title', 'name' => '公司名称', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \'size\' => \'\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',
   \'fieldtype\' => \'varchar\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'xinyongcode' => array ( 'id' => '370', 'moduleid' => '23', 'field' => 'xinyongcode', 'name' => '统一社会信用代码	', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '1', 'status' => '1', 'issystem' => '0', ), 'xinyongcode' => array ( 'id' => '370', 'moduleid' => '23', 'field' => 'xinyongcode', 'name' => '统一社会信用代码	', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \'size\' => \'50\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',
@@ -127,7 +127,40 @@ return array ( 'title' => array ( 'id' => '369', 'moduleid' => '23', 'field' => 
   \'watermark\' => \'0\',
   \'more\' => \'1\',
   \'cc\' => \'\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '24', 'status' => '1', 'issystem' => '0', ), 'createtime' => array ( 'id' => '367', 'moduleid' => '23', 'field' => 'createtime', 'name' => '发布时间', 'tips' => '', 'required' => '1', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'datetime', 'setup' => '', 'ispost' => '0', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '1', 'issystem' => '1', ), 'status' => array ( 'id' => '368', 'moduleid' => '23', 'field' => 'status', 'name' => '状态', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'radio', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '24', 'status' => '1', 'issystem' => '0', ), 'service' => array ( 'id' => '432', 'moduleid' => '23', 'field' => 'service', 'name' => '产品服务', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
+  \'edittype\' => \'kindeditor\',
+  \'toolbar\' => \'full\',
+  \'default\' => \'\',
+  \'height\' => \'\',
+  \'show_add_description\' => \'0\',
+  \'show_auto_thumb\' => \'0\',
+  \'showpage\' => \'0\',
+  \'enablekeylink\' => \'0\',
+  \'replacenum\' => \'\',
+  \'enablesaveimage\' => \'0\',
+  \'flashupload\' => \'0\',
+  \'alowuploadexts\' => \'\',
+  \'alowuploadlimit\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '25', 'status' => '1', 'issystem' => '0', ), 'development' => array ( 'id' => '433', 'moduleid' => '23', 'field' => 'development', 'name' => '企业发展', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
+  \'edittype\' => \'kindeditor\',
+  \'toolbar\' => \'full\',
+  \'default\' => \'\',
+  \'height\' => \'\',
+  \'show_add_description\' => \'0\',
+  \'show_auto_thumb\' => \'0\',
+  \'showpage\' => \'0\',
+  \'enablekeylink\' => \'0\',
+  \'replacenum\' => \'\',
+  \'enablesaveimage\' => \'0\',
+  \'flashupload\' => \'1\',
+  \'alowuploadexts\' => \'\',
+  \'alowuploadlimit\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '26', 'status' => '1', 'issystem' => '0', ), 'hits' => array ( 'id' => '434', 'moduleid' => '23', 'field' => 'hits', 'name' => '点击次数', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'number', 'setup' => 'array (
+  \'size\' => \'10\',
+  \'numbertype\' => \'1\',
+  \'decimaldigits\' => \'0\',
+  \'default\' => \'\',
+)', 'ispost' => '0', 'unpostgroup' => '3,4', 'listorder' => '27', 'status' => '1', 'issystem' => '0', ), 'createtime' => array ( 'id' => '367', 'moduleid' => '23', 'field' => 'createtime', 'name' => '发布时间', 'tips' => '', 'required' => '1', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'datetime', 'setup' => '', 'ispost' => '0', 'unpostgroup' => '3,4', 'listorder' => '93', 'status' => '1', 'issystem' => '1', ), 'status' => array ( 'id' => '368', 'moduleid' => '23', 'field' => 'status', 'name' => '状态', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '', 'errormsg' => '', 'class' => '', 'type' => 'radio', 'setup' => 'array (
   \'options\' => \'已审核|1
 未审核|0\',
   \'fieldtype\' => \'tinyint\',

@@ -1,0 +1,377 @@
+
+		<link rel="stylesheet" type="text/css" href="../Public/css/cpStyle.css" />
+		<script src="https://staticcdn.shuidi.cn/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Public/js/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Public/js/creditPage.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="../Public/css/swiper.min.css">    
+		<script src="../Public/js/swiper.min.js"> </script>
+		<div class="company-wiki">
+			<div class="company-wiki-box1 senior">
+				<div class="company-wiki-box1 senior">
+					<div class="company-wiki-box1_tab">
+						<a href="#content1" class="nav">信用公示</a>
+						<a href="#content2" class="nav">企业实力</a>
+						<a href="#content3" class="nav">实地认证</a>
+						<a href="#content4" class="nav">公司简介</a>
+						<a href="#content5" class="nav">荣誉资质</a>
+						<a href="#content6" class="nav">产品服务</a>
+						<a href="#content7" class="nav">企业发展</a>
+					</div>
+				</div>
+			</div>
+			<div class="senior_background">
+				<div class="senier_content1 rel clearfix">
+					<div id="content1" class="shangyi"></div>
+					<div class="content1_left">
+						<div class="clearfix">
+							<div class="pull-left company_logo_box ml_2">
+								<img alt="" title="" src="https://filecdn.shuidi.cn/img/upload/images/50/e3/a1/16/50e3a11685b02672eaa31fb4af84d6c0.jpg/94x94.png">
+							</div>
+							<div class="pull-left ml_20">
+								<div class="company_name">{$title}</div>
+								<div class="company_tag mt_16">
+									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">守信承诺企业</span>
+									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已核验登记信息</span><br />
+									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已提交守信经营承诺书</span>
+									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已开通可信网站</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content1_right">
+						<div class="content1_right_box1">
+							<!-- <a href="https://baike.shuidi.cn/wikicertificate?digest=5a368bae4190fea22ba2baa491dfc980" target="_blank" class="company_vip_logo"></a> -->
+							<img src="../Public/images/senior.png" alt=""> </div>
+						<div class="content1_right_box2">信用累计：<span class="year">{$leiji}</span>年</div>
+					</div>
+				</div>
+			</div>
+			<div class="company-wiki-content">
+				<!--概述-->
+				<div class="company_self_report">
+					<div class="left_box">
+						<div id="panorama">
+							<div class="bg_white">
+								<div class="rel wiki_item">
+									<div class="shangyi" id="content1"></div>
+									<div class="slider_tab">信用公示</div>
+									<div class="company_content_title">
+										<div class="left_bolder">登记信息</div>
+									</div>
+									<table class="regist_msg">
+										<tbody>
+											<tr>
+												<th class="th1">统一社会信用代码：</th>
+												<th class="th2">{$xinyongcode}</th>
+												<th class="th3">法定代表人：</th>
+												<th class="th4">{$representative}</th>
+											</tr>
+											<tr>
+												<td>注册号：</td>
+												<td>{$register}</td>
+												<td>注册资本：</td>
+												<td>{$capital}</td>
+											</tr>
+											<tr>
+												<td>组织机构代码：</td>
+												<td>{$organization}</td>
+												<td>公司类型：</td>
+												<td>{$type}</td>
+											</tr>
+											<tr>
+												<td>登记机关：</td>
+												<td>{$office}</td>
+												<td>经营状态：</td>
+												<td>{$business_status}</td>
+											</tr>
+											<tr>
+												<td>成立日期：</td>
+												<td>{$gettime}</td>
+												<td>营业期限：</td>
+												<td>{$term}</td>
+											</tr>
+											<tr>
+												<td>发照日期：</td>
+												<td>{$realtime}</td>
+												<td>企业地址：</td>
+												<td>{$address}</td>
+											</tr>
+											<tr>
+												<td>经营范围：</td>
+												<td colspan="3">
+													<span>{$range}</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- 手机端 -->
+									<div class="register-info">
+										<p>
+											<span>统一社会信用代码：</span><span class="value">{$xinyongcode}</span></p>
+										<p>
+											<span>注册号：</span><span class="value">{$register}</span></p>
+										<p><span>组织机构代码：</span><span class="value">{$organization}</span></p>
+										<p>
+											<span>经营状态：</span><span class="value">{$business_status}</span></p>
+										<p>
+											<span>公司类型：</span><span class="value">{$type}</span></p>
+										<p>
+											<span>法定代表人：</span><span class="value">{$representative}</span></p>
+										<p><span>注册资本：</span><span class="value">{$capital}</span></p>
+										<p>
+											<span>营业期限：</span><span class="value">{$term}</span></p>
+										<p><span>发照日期：</span><span class="value">{$realtime}</span></p>
+										<p><span>登记机关：</span><span class="value">{$office}</span></p>
+										<p>
+											<span>企业地址：</span><span class="value">{$address}</span></p>
+										<p>
+											<span class="fanweititle">经营范围：</span><span class="value">
+											{$range}</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="rel wiki_item">
+								<div class="shangyi" id="content2"></div>
+								<div class="slider_tab">企业实力</div>
+								<div class="company_content_title">
+									<div class="left_bolder">企业实力</div>
+								</div>
+								<p class="heyan-date"></p>
+								<h3 class="powerTitle">概览</h3>
+								<div class="overview">
+									<volist name="overview_list" catid="catid" id="rd">
+										<div class="overview-item">
+											<div class="image">
+												<img src="{$rd.image}" />
+											</div>
+											<div class="text">
+												<p>{$rd.title}</p>
+												<p class="val">{$rd.desc}</p>
+											</div>
+										</div>
+									</volist>
+								</div>
+								<h3 class="powerTitle">认证许可</h3>
+								<div class="overview">
+									<volist name="license_list" catid="catid" id="rd">
+										<div class="ov-largeItem">
+											<div class="image">
+												<img src="{$rd.image}" alt="" />
+											</div>
+											<div class="text">
+												<p>{$rd.title}</p>
+												<p class="val">{$rd.desc}</p>
+											</div>
+										</div>
+									</volist>
+								</div>
+								<h3 class="powerTitle">知识产权</h3>
+								<div class="overview">
+									<volist name="intellectual_list" catid="catid" id="rd">
+										<div class="overview-item">
+											<div class="image">
+												<img src="{$rd.image}" alt="">
+											</div>
+											<div class="text">
+												<p>{$rd.title}</p>
+												<p class="val">{$rd.desc}</p>
+											</div>
+										</div>
+									</volist>
+								</div>
+								<div class="vrFoot">
+									<div class="wenzishenming">
+										<p>由权威征信机构实地认证</p>
+										<img src="https://staticcdn.shuidi.cn/wiki/baike/logo.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="rel wiki_item">
+								<div class="shangyi" id="content3"></div>
+								<div class="slider_tab">实地认证</div>
+								<div class="company_content_title vr-head">
+									<div class="left_bolder">
+										全景展示
+										<img src="../Public/images/pei_pc.png" alt="">
+									</div>
+									<!-- <div class="jubao">
+										<a style="color: #00ae63;" href="javascript:;">我要反馈 &gt;</a>
+
+									</div> -->
+								</div>
+								<div class="swiperWrapper">
+									<div class="swiper-container gallery-top">
+									    <div class="swiper-wrapper">
+											<volist name="panoramic" catid="catid" id="r">
+												<div class="swiper-slide" style="background-image:url({$r.filepath})"></div>
+											</volist>
+
+
+									    </div>
+									    <div class="swiper-button-next swiper-button-white"></div>
+									    <div class="swiper-button-prev swiper-button-white"></div>
+									  </div>
+									  <div class="swiper-container gallery-thumbs">
+									    <div class="swiper-wrapper">
+											<volist name="panoramic" catid="catid" id="r">
+												<div class="swiper-slide" style="background-image:url({$r.filepath})">
+													<p>{$r.filename}</p>
+												</div>
+											</volist>
+
+										</div>
+									  <div class="swiper-scrollbar"></div>
+									  </div>
+								</div>
+							</div>
+							<div class="self_report_box wiki_item">
+								<div class="shangyi" id="content4"></div>
+								<div class="slider_tab">公司简介</div>
+								<div class="customize_box">
+									<div class="company_content_title">
+										<div class="left_bolder">公司简介</div>
+									</div>
+									<div class="company_abstract_text2">{$introduction}</div>
+								</div>
+							</div>
+							<div class="customize_box rel wiki_item">
+								<div class="shangyi" id="content5"></div>
+								<div class="slider_tab">荣誉资质</div>
+								<div class="company_content_title">
+									<div class="left_bolder">荣誉资质</div>
+								</div>
+								<!--            图片墙模块标题-->
+								<div class="pic-wall-module item">
+									<div>
+										<ul class="clearfix">
+											<li>
+												<div>
+													<img class="showHonorImg" data-detail="%7B%22Id%22:27,%22CertName%22:%22%5Cu9ad8%5Cu65b0%5Cu6280%5Cu672f%5Cu4f01%5Cu4e1a%22,%22CertNo%22:%22GR201632003319%22,%22CertImg%22:%22https:%5C/%5C/co-image.qichacha.com%5C/upload%5C/chacha%5C/img%5C/20190104%5C/1546606580488095.jpg%22,%22IssueOrg%22:%22%5Cu6c5f%5Cu82cf%5Cu7701%5Cu79d1%5Cu5b66%5Cu6280%5Cu672f%5Cu5385%22,%22IssueDate%22:%222016-11-30%22,%22StartDate%22:%222016-11-30%22,%22EndDate%22:%222019-11-30%22%7D" src="https://filecdn.shuidi.cn/img/upload/images/b2/fb/c5/48/b2fbc548402e0423a17d2a8be73d8ebe.png/244x180.jpg">
+													<p>专利证书</p>
+												</div>
+											</li>
+										</ul>
+										<script>
+											var $li = $('.pic-wall-module li').prop("outerHTML");
+											var str = '';
+											new Array(8).fill(0).map((item) => {
+												str += $li;
+											});
+											$(str).appendTo($('.pic-wall-module ul'))
+										</script>
+									</div>
+								</div>
+							</div>
+							<!-- 产品服务 -->
+							<div class="customize_box rel wiki_item">
+								<div class="shangyi" id="content6"></div>
+								<div class="slider_tab">产品服务</div>
+								<div class="company_content_title">
+									<div class="left_bolder">产品服务</div>
+								</div>
+								<!--            图文单图模块标题-->
+								{$service}
+
+							</div>
+							<!-- 企业发展 -->
+							<div class="customize_box rel wiki_item">
+								<div class="shangyi" id="content7"></div>
+								<div class="slider_tab">企业发展</div>
+								<div class="company_content_title">
+									<div class="left_bolder">企业发展</div>
+								</div>
+
+								{$development}
+							</div>
+							<!-- 企业发展 -->
+						</div>
+					</div>
+					<div class="right_box">
+						<div class="right_item">
+							<div class="right_box_title">基本信息<span class="self_tip">企业自述</span></div>
+							<div class="base_info" title="4006173173">
+								<img src="../Public/images/phone@2x.png" alt="">认证电话：<span class="info_box">{$phone}</span>
+							</div>
+							<div class="base_info" title="shuidi@pingansec.com">
+								<img src="../Public/images/email@2x.png" alt="">认证邮箱：<span class="info_box">{$email}</span>
+							</div>
+							<div class="base_info" title="https://www.pacra.cn/">
+								<img src="../Public/images/internet@2x.png" alt="">认证网址：
+								<a href="{$website}" target="_blank" class="info_box text_underline">{$website}</a>
+							</div>
+						</div>
+						<div class="right_item card">
+							<div class="right_box_title">可信名片<span class="self_tip">企业自述</span></div>
+							<div class="card-box">
+
+								<volist name="card_list" catid="catid" id="r">
+									<div class="carditem">
+										<div class="per-img">
+											<img src="{$r.img}">
+										</div>
+										<div class="bsinfo">
+											<p class="name">{$r.name}<img class="card_gou" src="../Public/images/card_1.jpg"></p>
+											<p class="posi"><span class="borser_posi">{$r.company}</span></p>
+											<p class="phone"><img class="card_phone" src="../Public/images/card_phone.png">{$r.tel}</p>
+											<span class="more-card-detail" data-detail="{$r.more_url}">查看更多
+												&gt;&gt;</span>
+										</div>
+									</div>
+								</volist>
+
+
+
+
+							</div>
+						</div>
+						<div class="right_item">
+							<div class="right_box_title">企业公众号<span class="self_tip">企业自述</span></div>
+							<div class="qrcode-img">
+								<img src="{$account}">
+								<p>扫一扫，关注更多企业信息</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-detail" id="card-detail" style="display: none;">
+			<div class="per-img">
+				<img src="" alt="">
+			</div>
+			<div class="bsinfo">
+				<p><span class="name"></span><span class="company"></span></p>
+				<div><span class="centify centify1"><i class="icon power"></i>企业已提供在职证明</span> <span class="centify centify2"><i class="icon power"></i>已核验身份证件</span></div>
+				<p><span class="col_85">联系电话：</span><span class="tel"></span></p>
+				<p><span class="col_85">微信号：</span><span class="wechat"></span></p>
+				<p><span class="col_85">联系邮箱：</span><span class="email"></span></p>
+			</div>
+			
+			<div class="clearfix"></div>
+			<p class="card_description"><span class="col_85">个人简介：</span><span class="introduce"></span></p>
+		</div>
+		<!-- 荣誉证书 -->
+		<div class="art-box" id="art-box">
+			<a class="bimg" target="_blank" href="javascript:;"
+			 rel="nofollow"> <img src="../Public/images/bg3.jpg"> </a>
+			<div class="title">
+				
+			</div>
+			<dl class="issueorg">
+				<dt>授权企业/机构</dt>
+				<dd></dd>
+			</dl>
+			<dl class="certno">
+				<dt>证书编号</dt>
+				<dd></dd>
+			</dl>
+			<dl class="issuedate">
+				<dt>授予时间</dt>
+				<dd></dd>
+			</dl>
+			<dl class="date">
+				<dt>有效日期</dt>
+				<dd></dd>
+			</dl>
+		</div>
+

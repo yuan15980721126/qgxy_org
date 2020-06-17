@@ -33,6 +33,7 @@
 					<input type="hidden" name="type" value="" /> 
 
 					<div class="type clearfix">
+						<label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module==Identification||$module==number}checked="checked"{/if} value="Identification" /><span class="arrow-bottom-b">信用标识</span></label>
 
 						<label><input type="radio" name="module" id="" data-keyword="企业名称" {if $module==Credit||$module==number}checked="checked"{/if} value="{$Categorys[$T[credit]][module]}" /><span class="arrow-bottom-b">示范单位</span></label>
 

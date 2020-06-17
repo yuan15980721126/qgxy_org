@@ -22,7 +22,7 @@ return array ( 'img' => array ( 'id' => '389', 'moduleid' => '24', 'field' => 'i
   \'default\' => \'\',
   \'ispassword\' => \'0\',
   \'fieldtype\' => \'varchar\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'wachat' => array ( 'id' => '394', 'moduleid' => '24', 'field' => 'wachat', 'name' => '微信号', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'wechat' => array ( 'id' => '394', 'moduleid' => '24', 'field' => 'wechat', 'name' => '微信号', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \'size\' => \'\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',

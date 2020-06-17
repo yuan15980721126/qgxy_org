@@ -1538,7 +1538,27 @@ function getRemainderTime($one_time, $two_time, $return_type=0, $format_array=ar
 }
 
 
+/*信用标识图标功能*/
+function Icons($type,$data){
+    $where['type'] = $type;
+    $where['status'] = 1;
+    $where['id'] = $data;
+    $list = M('icon')->where($where)->find();
+    for($i=1;$i<=8;$i++){
+        if($list['image_'.$i]){
+            $arr[$i]['image'] = $list['image_'.$i];
+            $arr[$i]['title'] = $list['title_'.$i];
+            $arr[$i]['desc'] = $list['desc_'.$i];
+        }
+    }
+//    echo '<pre>';
+//    print_r($list);
+//    print_r($arr);
 
+    return $arr;
+
+
+}
 
 
 ?>

@@ -1,2 +1,2 @@
 <?php
-return array ( 'Page' => '1', 'Article' => '2', 'Product' => '3', 'Picture' => '4', 'Download' => '5', 'Feedback' => '6', 'Link' => '7', 'Guestbook' => '8', 'Kefu' => '9', 'Credit' => '19', 'Certification' => '20', 'Cultivation' => '21', 'Experimental' => '22', 'Identification' => '23', 'Card' => '24', 'Icon' => '25', ); ?>
+return array ( 'Page' => '1', 'Article' => '2', 'Product' => '3', 'Picture' => '4', 'Download' => '5', 'Feedback' => '6', 'Link' => '7', 'Guestbook' => '8', 'Kefu' => '9', 'Credit' => '19', 'Certification' => '20', 'Cultivation' => '21', 'Experimental' => '22', 'Identification' => '23', 'Card' => '24', 'Icon' => '25', 'Promise' => '26', 'Honor' => '27', ); ?>

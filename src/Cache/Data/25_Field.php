@@ -52,7 +52,7 @@ return array ( 'type' => array ( 'id' => '400', 'moduleid' => '25', 'field' => '
   \'watermark\' => \'0\',
   \'more\' => \'1\',
   \'cc\' => \'\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'title_3	' => array ( 'id' => '408', 'moduleid' => '25', 'field' => 'title_3	', 'name' => '标题3', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'title_3' => array ( 'id' => '436', 'moduleid' => '25', 'field' => 'title_3', 'name' => '标题3', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \'size\' => \'\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',

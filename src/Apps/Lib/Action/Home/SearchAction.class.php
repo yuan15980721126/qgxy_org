@@ -220,7 +220,7 @@ class SearchAction extends BaseAction
 
 		$this->assign('ccount', $tcount);
 
-
+//        echo $this->dao->getLastSql();
 
 		if($keyword && ($count || $tcount)){
 
@@ -260,7 +260,8 @@ class SearchAction extends BaseAction
 
 			}
 
-
+//		echo '<pre>';
+//		print_r($list);
 
 			$this->assign('pages',$pages);
 
