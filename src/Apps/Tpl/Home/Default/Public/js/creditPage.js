@@ -59,11 +59,11 @@ $(function() {
 		var html = $('#art-box');
 		console.log(data,html)
 		// html.find('.bimg img').attr('src', data.CertImg);
-		html.find('.title').text(data.CertName ? data.CertName : '-');
-		html.find('.issueorg dd').text(data.CertNo ? data.CertNo : '-');
-		html.find('.certno dd').text(data.StartDate ? data.StartDate : '-');
-		html.find('.issuedate dd').text(data.IssueDate ? data.IssueDate : '-');
-		html.find('.date dd').text(data.IssueOrg ? data.IssueOrg : '-');
+		html.find('.title').text(data.title ? data.title : '-');
+		html.find('.issueorg dd').text(data.company ? data.company : '-');
+		html.find('.certno dd').text(data.number ? data.number : '-');
+		html.find('.issuedate dd').text(data.gettime ? data.gettime : '-');
+		html.find('.date dd').text(data.effectivetime ? data.effectivetime : '-');
 		layer.open({
 			type: 1,
 			title: false,
@@ -143,7 +143,7 @@ $(function() {
 	})
 	// 手机导航滚动
 	if(isPhone){
-		console.log(3)
+		// console.log(3)
 		$('.company-wiki-box1_tab').addClass("swiper-container");
 		$('.company-wiki-box1_tab .nav').wrapAll('<div class="swiper-wrapper"></div>')
 		$('.company-wiki-box1_tab .nav').addClass('swiper-slide');

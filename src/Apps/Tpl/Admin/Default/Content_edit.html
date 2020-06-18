@@ -34,11 +34,30 @@
 
         </volist>
     {if $module_name == 'Identification'}
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*守信承诺</font></td>
+                <td width="90%" id="">
+                    <YP:list sql="SELECT `*` FROM `mqu_promise` WHERE status=1 " id="rd" key="k"  >
+                        <input type="checkbox" class="input_checkbox " name="promise[]"  <?php if (in_array($rd['id'], $promise_list)) { ?>checked <?php }?>  value="{$rd.id}">{$rd.title}---<img src="{$rd.image}" style="margin:0px;width: 70px;height: 70px;"/><br>
+                    </YP:list>
+                </td>
+            </tr>
+
+            <tr class="attribute_list">
+                <td width="10%">
+                    <font color="red">*荣誉资质</font></td>
+                <td width="90%" id="">
+                    <YP:list sql="SELECT `*` FROM `mqu_honor` WHERE status=1 " id="rd" key="k"  >
+                        <input type="checkbox" class="input_checkbox " name="honor[]"  <?php if (in_array($rd['id'], $honor_list)) { ?>checked <?php }?>  value="{$rd.id}">{$rd.title}---<img src="{$rd.image}" style="margin:0px;width: 70px;height: 70px;"/><br>
+                    </YP:list>
+                </td>
+            </tr>
 
 
             <tr class="attribute_list">
                 <td width="10%">
-                    <font color="red">*</font>可信名片</td>
+                    <font color="red">*可信名片</font></td>
                 <td width="90%" id="">
                     <YP:list sql="SELECT `*` FROM `mqu_card` WHERE status=1 " id="rd" key="k"  >
                     <input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="{$rd.id}">{$rd.name}---{$rd.company}<br>
@@ -48,7 +67,7 @@
 
             <tr class="attribute_list">
                 <td width="10%">
-                    <font color="red">*</font>企业实力-概览</td>
+                    <font color="red">*企业实力-概览</font></td>
                 <td width="90%" id="">
                     <YP:list sql="SELECT `*` FROM `mqu_icon` WHERE type = 1 AND status=1 " id="rd" key="k"  >
                         <input type="radio" class="input_checkbox " name="overview"  <?php if (in_array($rd['id'], $overview_list)) { ?>checked <?php }?>  value="{$rd.id}">
@@ -65,7 +84,7 @@
 
             <tr class="attribute_list">
                 <td width="10%">
-                    <font color="red">*</font>企业实力-认证许可</td>
+                    <font color="red">*企业实力-认证许可</font></td>
                 <td width="90%" id="">
                     <YP:list sql="SELECT `*` FROM `mqu_icon` WHERE type = 2 AND status=1 " id="rd" key="k"  >
                         <input type="radio" class="input_checkbox " name="license"  <?php if (in_array($rd['id'], $license_list)) { ?>checked <?php }?>  value="{$rd.id}">
@@ -81,7 +100,7 @@
             </tr>
             <tr class="attribute_list">
                 <td width="10%">
-                    <font color="red">*</font>企业实力-知识产权</td>
+                    <font color="red">*企业实力-知识产权</font></td>
                 <td width="90%" id="">
                     <YP:list sql="SELECT `*` FROM `mqu_icon` WHERE type = 3 AND status=1 " id="rd" key="k"  >
                         <input type="radio" class="input_checkbox " name="intellectual"  <?php if (in_array($rd['id'], $intellectual_list)) { ?>checked <?php }?>  value="{$rd.id}">

@@ -30,10 +30,10 @@
 							<div class="pull-left ml_20">
 								<div class="company_name">{$title}</div>
 								<div class="company_tag mt_16">
-									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">守信承诺企业</span>
-									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已核验登记信息</span><br />
-									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已提交守信经营承诺书</span>
-									<span class="company_tag_item" data-url="http://filecdn.shuidi.cn/img/upload/images/80/b1/28/23/80b12823bb31f3b43713fb4e97123fbc.jpg/630x310.jpg"><img class="authentication_icon2" src="../Public/images/authentication_white.png">已开通可信网站</span>
+									<volist name="promise_list" catid="catid" id="rd" key="k">
+										<span class="company_tag_item" data-url="{$rd.image}"><img class="authentication_icon2" src="../Public/images/authentication_white.png">{$rd.title}</span>
+										<if condition="$k%2==0"> <br></if>
+									</volist>
 								</div>
 							</div>
 						</div>
@@ -244,20 +244,23 @@
 								<div class="pic-wall-module item">
 									<div>
 										<ul class="clearfix">
+											<volist name="honor_list" catid="catid" id="rd" key="k">
+
 											<li>
 												<div>
-													<img class="showHonorImg" data-detail="%7B%22Id%22:27,%22CertName%22:%22%5Cu9ad8%5Cu65b0%5Cu6280%5Cu672f%5Cu4f01%5Cu4e1a%22,%22CertNo%22:%22GR201632003319%22,%22CertImg%22:%22https:%5C/%5C/co-image.qichacha.com%5C/upload%5C/chacha%5C/img%5C/20190104%5C/1546606580488095.jpg%22,%22IssueOrg%22:%22%5Cu6c5f%5Cu82cf%5Cu7701%5Cu79d1%5Cu5b66%5Cu6280%5Cu672f%5Cu5385%22,%22IssueDate%22:%222016-11-30%22,%22StartDate%22:%222016-11-30%22,%22EndDate%22:%222019-11-30%22%7D" src="https://filecdn.shuidi.cn/img/upload/images/b2/fb/c5/48/b2fbc548402e0423a17d2a8be73d8ebe.png/244x180.jpg">
-													<p>专利证书</p>
+													<img class="showHonorImg" data-detail="{$rd.more_url}" src="{$rd.image}">
+													<p>{$rd.title}</p>
 												</div>
 											</li>
+											</volist>
 										</ul>
 										<script>
-											var $li = $('.pic-wall-module li').prop("outerHTML");
-											var str = '';
-											new Array(8).fill(0).map((item) => {
-												str += $li;
-											});
-											$(str).appendTo($('.pic-wall-module ul'))
+											// var $li = $('.pic-wall-module li').prop("outerHTML");
+											// var str = '';
+											// new Array(8).fill(0).map((item) => {
+											// 	str += $li;
+											// });
+											// $(str).appendTo($('.pic-wall-module ul'))
 										</script>
 									</div>
 								</div>

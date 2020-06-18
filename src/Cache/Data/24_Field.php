@@ -12,7 +12,7 @@ return array ( 'img' => array ( 'id' => '389', 'moduleid' => '24', 'field' => 'i
   \'default\' => \'\',
   \'ispassword\' => \'0\',
   \'fieldtype\' => \'varchar\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'company' => array ( 'id' => '391', 'moduleid' => '24', 'field' => 'company', 'name' => '公司', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'company' => array ( 'id' => '391', 'moduleid' => '24', 'field' => 'company', 'name' => '公司名称', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \'size\' => \'\',
   \'default\' => \'\',
   \'ispassword\' => \'0\',
