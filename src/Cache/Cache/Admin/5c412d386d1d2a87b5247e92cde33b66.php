@@ -92,7 +92,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*守信承诺</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_promise` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="promise[]"  <?php if (in_array($rd['id'], $promise_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["title"]); ?>---<img src="<?php echo ($rd["image"]); ?>" style="margin:0px;width: 70px;height: 70px;"/><br><?php endforeach; endif;?>
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_promise` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="promise[]"  <?php if (in_array($rd['id'], $promise_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["title"]); ?>---<img src="<?php echo ($rd["image"]); ?>" style="margin:0px;width: 70px;height: 70px;"/><br><?php endforeach; endif;?>
                 </td>
             </tr>
 
@@ -100,7 +100,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*荣誉资质</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_honor` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="honor[]"  <?php if (in_array($rd['id'], $honor_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["title"]); ?>---<img src="<?php echo ($rd["image"]); ?>" style="margin:0px;width: 70px;height: 70px;"/><br><?php endforeach; endif;?>
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_honor` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="honor[]"  <?php if (in_array($rd['id'], $honor_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["title"]); ?>---<img src="<?php echo ($rd["image"]); ?>" style="margin:0px;width: 70px;height: 70px;"/><br><?php endforeach; endif;?>
                 </td>
             </tr>
 
@@ -109,7 +109,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*可信名片</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_card` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["name"]); ?>---<?php echo ($rd["company"]); ?><br><?php endforeach; endif;?>
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_card` WHERE status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="checkbox" class="input_checkbox " name="card[]"  <?php if (in_array($rd['id'], $card_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>"><?php echo ($rd["name"]); ?>---<?php echo ($rd["company"]); ?><br><?php endforeach; endif;?>
                 </td>
             </tr>
 
@@ -117,7 +117,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*企业实力-概览</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 1 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="overview"  <?php if (in_array($rd['id'], $overview_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_icon` WHERE type = 1 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="overview"  <?php if (in_array($rd['id'], $overview_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
                         <?php for($i=1;$i<=8;$i++){?>
                             <?php if(!empty($rd['image_'.$i])){?>
                             <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->
@@ -132,7 +132,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*企业实力-认证许可</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 2 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="license"  <?php if (in_array($rd['id'], $license_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_icon` WHERE type = 2 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="license"  <?php if (in_array($rd['id'], $license_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
                         <?php for($i=1;$i<=8;$i++){?>
                         <?php if(!empty($rd['image_'.$i])){?>
                         <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->
@@ -146,7 +146,7 @@ function confirm_delete(url){
                 <td width="10%">
                     <font color="red">*企业实力-知识产权</font></td>
                 <td width="90%" id="">
-                    <?php  $_result=M()->query("SELECT `*` FROM `mqu_icon` WHERE type = 3 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="intellectual"  <?php if (in_array($rd['id'], $intellectual_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
+                    <?php  $_result=M()->query("SELECT * FROM `mqu_icon` WHERE type = 3 AND status=1 "); if ($_result): $k=0;foreach($_result as $key=>$rd):++$k;$mod = ($k % 2 );?><input type="radio" class="input_checkbox " name="intellectual"  <?php if (in_array($rd['id'], $intellectual_list)) { ?>checked <?php }?>  value="<?php echo ($rd["id"]); ?>">
                         <?php for($i=1;$i<=8;$i++){?>
                         <?php if(!empty($rd['image_'.$i])){?>
                         <!--图标:<img src="<?php echo $rd['image_'.$i];?>" style="width: 50px;height: 50px;"/>-->

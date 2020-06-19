@@ -26,7 +26,7 @@ $(function() {
 		var data = $(e.currentTarget).attr('data-detail');
 		data = data ? JSON.parse(decodeURIComponent(data)) : {};
 		var html = $('#card-detail');
-		console.log(data);
+		// console.log(data);
 		html.find('.per-img img').attr('src', data.img);
 		html.find('.name').text(data.name ? data.name : '-');
 		html.find('.company').text(data.company ? data.company : '-');
@@ -57,8 +57,9 @@ $(function() {
 		var data = $(e.currentTarget).attr('data-detail');
 		data = data ? JSON.parse(decodeURIComponent(data)) : {};
 		var html = $('#art-box');
-		console.log(data,html)
+		// console.log(data,html)
 		// html.find('.bimg img').attr('src', data.CertImg);
+        html.find('.bimg img').attr('src', data.image);
 		html.find('.title').text(data.title ? data.title : '-');
 		html.find('.issueorg dd').text(data.company ? data.company : '-');
 		html.find('.certno dd').text(data.number ? data.number : '-');
